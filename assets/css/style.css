@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #decfb0;
+  color: #42210B;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #42210B;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  font-size: 1.5rem;
+}
+
+h1::before {
+  content: "⚔️ ";
+}
+
+h1::after {
+  content: " ⚔️";
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a0715b;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(66, 33, 11, 0.25);
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #9C2B2B;
+  color: #ffffff;
+}
+
+.tab-button:hover {
+  background-color: #E0776B;
+  color: #ffffff;
+}
+
+#checklist {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(66, 33, 11, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#checklist thead {
+  background-color: #a0715b;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#checklist th, #checklist td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #a0715b;
+}
+
+#checklist tbody tr:nth-child(odd) {
+  background-color: #decfb0;
+}
+
+#checklist tbody tr:nth-child(even) {
+  background-color: #d3c39e;
+}
+
+#checklist img {
+  border-radius: 10px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #a0715b;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(66, 33, 11, 0.25);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #E0776B;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+#downloadJson::before {
+  content: "📜";
+}
+
+#downloadExcel::before {
+  content: "📜";
+}
+
+#download-buttons button {
+  box-shadow: none;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+#scrollTopBtn.visible {
+  display: flex;
+}
+
+table {
+  margin-top: 20px;
+}
+
+td {
+  padding: 12px 15px;
+}
+
+body > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body, .tabs, table, button {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tab-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  td, th {
+    padding: 8px;
+  }
+
+  #download-buttons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  #download-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
